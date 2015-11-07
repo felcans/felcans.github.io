@@ -9,15 +9,15 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
-    color: #fff;
-    background: #132028;
-    font-size: 13px;
+  color: #fff;
+  background: #132028;
+  font-size: 1em;
 }
 
 #container {
-    max-width:1000px;
-    margin:0 auto;
-    padding:0 1em;
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 1em;
 }
 
 .l-box {
@@ -26,42 +26,41 @@ body {
 
 div.icon {
   text-align: center;
-  line-height: 45px;
 }
 
 .icon i[class^="ion"] {
   color: #fff;
-  font-size: 27pt;
+  font-size: 3em;
 }
 
 #backdrop {
-    content: ' ';
-    background-image: url('../img/backdrop.jpg');
-    background-position: bottom center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    min-width: 100%;
-    z-index: -1;
+  content: ' ';
+  background-image: url('../img/backdrop.jpg');
+  background-position: bottom center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
 }
 
 /*
- * Header styles
- *
- */
+* Header styles
+*
+*/
 
 header {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: table;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: table;
 }
 
 header .header-box {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 h1,
@@ -69,13 +68,32 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: roboto condensed, sans-serif;
-    font-weight: 300;
+  font-family: lato, sans-serif;
+  font-weight: 300;
 }
 
-header .header-box h3 {
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+header .header-box h1 {
+  margin: 0.25em 0;
+  font-size: 4em;
+}
+
+header .header-box h2 {
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  font-family: lato, sans-serif
+}
+
+header .header-box li {
+  padding: 0 3em;
+  display: inline-block;
+}
+
+header .header-box li:first-of-type {
+  padding-left: 0;
+}
+
+header .header-box i[class^="ion"] {
+  font-size:1.5em;
 }
 
 /*
@@ -87,38 +105,25 @@ section, footer {
   padding:2em 0; 
 }
 
-section .title {
-  background: rgba(255,255,255,0.1);
-  line-height: 45px;
-  text-transform: uppercase;
-  margin-bottom: 2em;
+section .title-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-bottom: 1em;
 }
 
-.title h2 {
-  margin: 0
-}
-
-section .icon {
-  width: 45px;
-  height: 45px;
-  float: left;
-  margin-right: 1em;
-}
 
 /*
  * About styles
  *
  */
 
-section#about .icon {
-  background: #ff7800;
-  background: -moz-linear-gradient(45deg,  #ff7800 0%, #b05700 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ff7800), color-stop(100%,#b05700));
-  background: -webkit-linear-gradient(45deg,  #ff7800 0%,#b05700 100%);
-  background: -o-linear-gradient(45deg,  #ff7800 0%,#b05700 100%);
-  background: -ms-linear-gradient(45deg,  #ff7800 0%,#b05700 100%);
-  background: linear-gradient(45deg,  #ff7800 0%,#b05700 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7800', endColorstr='#b05700',GradientType=1 );
+section#about span {
+  font-weight: 300;
+  color: #12ade0;
+}
+
+section#about .item {
+  padding:0.5em 0;
 }
 
 /*
@@ -126,16 +131,6 @@ section#about .icon {
  *
  */
 
-section#work .icon {
-  background: #087c8e;
-  background: -moz-linear-gradient(45deg,  #087c8e 0%, #0d5967 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#087c8e), color-stop(100%,#0d5967));
-  background: -webkit-linear-gradient(45deg,  #087c8e 0%,#0d5967 100%);
-  background: -o-linear-gradient(45deg,  #087c8e 0%,#0d5967 100%);
-  background: -ms-linear-gradient(45deg,  #087c8e 0%,#0d5967 100%);
-  background: linear-gradient(45deg,  #087c8e 0%,#0d5967 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#087c8e', endColorstr='#0d5967',GradientType=1 );
-}
 
 section#work .box {
   -webkit-transition: background-position 2s cubic-bezier(0, 1, 0, 1), border-color 500ms, background-color 500ms;
@@ -146,7 +141,6 @@ section#work .box {
   background-image: -webkit-repeating-linear-gradient(135deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
   height: 150px;
-  background-color: #087c8e;
 }
 
 section#work .box:hover {
@@ -161,10 +155,6 @@ section#work .l-box {
  * Skills styles
  *
  */
-
-section#skills .icon {
-  background: green;
-}
 
 /*
  * Footer styles
