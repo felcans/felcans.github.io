@@ -45,6 +45,14 @@ div.icon {
   z-index: -1;
 }
 
+.sizer {
+  display:inline-block;
+  vertical-align: middle;
+  height:100%;
+  width:0;
+}
+
+
 /*
 * Header styles
 *
@@ -77,11 +85,6 @@ header .header-box h1 {
   font-size: 4em;
 }
 
-header .header-box h2 {
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  font-family: lato, sans-serif
-}
 
 header .header-box li {
   padding: 0 3em;
@@ -117,13 +120,14 @@ section .title-bar {
  *
  */
 
-section#about span {
+section#about .h {
   font-weight: 300;
   color: #12ade0;
+  padding-bottom: 0.5em;
 }
 
 section#about .item {
-  padding:0.5em 0;
+  padding:1em 0;
 }
 
 /*
@@ -132,7 +136,7 @@ section#about .item {
  */
 
 
-section#work .box {
+section#work .overlay {
   -webkit-transition: background-position 2s cubic-bezier(0, 1, 0, 1), border-color 500ms, background-color 500ms;
           transition: background-position 2s cubic-bezier(0, 1, 0, 1), border-color 500ms, background-color 500ms;
   background-attachment: fixed, scroll;
@@ -140,10 +144,10 @@ section#work .box {
   background-position: center center, 0 0;
   background-image: -webkit-repeating-linear-gradient(135deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
-  height: 150px;
+  padding-bottom: 75%;
 }
 
-section#work .box:hover {
+section#work .overlay:hover {
   background-position: -100vw 0, 0 0;
 }
 
