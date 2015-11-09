@@ -52,6 +52,29 @@ div.icon {
   width:0;
 }
 
+/*
+* Light Box styles
+*
+*/
+
+.light-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: -1;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, z-index 0s linear 0.5s;
+}
+
+.light-box.active {
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, z-index 0s linear;
+}
 
 /*
 * Header styles
@@ -190,6 +213,30 @@ section#work .work-box {
   cursor:pointer;
 }
 
+section#work .autocity:hover {
+  background-color: #CA181F;
+}
+
+section#work .wr:hover {
+  background-color: #f7c00d;
+}
+
+section#work .portal:hover {
+  background-color: #0078E7;
+}
+
+section#work .icc:hover {
+  background-color: #E38E19;
+}
+
+section#work .cycle:hover {
+  background-color: #E82336;
+}
+
+section#work .qcc:hover {
+  background-color: #025A95;
+}
+
 /*
  * Contact styles
  *
@@ -233,6 +280,11 @@ footer .l-box {
   padding: 2em;
 }
 
+footer a, footer a:visited {
+  color:#12ade0;
+  text-decoration: none;
+}
+
 
 /*
  * Media Queries
@@ -267,5 +319,8 @@ footer .l-box {
 @media screen and (max-width: 35.5em) {
   .l-box {
     padding: 0;
+  }
+  section#work .l-box {
+    padding: 1em 0;
   }
 }
