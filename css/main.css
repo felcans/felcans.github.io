@@ -55,6 +55,10 @@ div.icon {
   width:0;
 }
 
+.pure-g {
+  display: block;
+}
+
 /*
 * Light Box styles
 *
@@ -214,6 +218,8 @@ section#work .l-box {
 section#work .work-box {
   text-align: center;
   cursor:pointer;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
 }
 
 section#work .autocity:hover {
