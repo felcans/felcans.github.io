@@ -92,14 +92,22 @@
         </div>
         <div class="body">
           <div class="pure-u-1 pure-u-md-1-2 img">
-            <div class="slide-wrapper">
+            <div class="slide-wrapper" style="left:-{{(slideIdx * 100)}}%">
             {{#each .details.pics}}
               <div class="slide-img" style="background-image:url('{{[.]}}');"></div>
             {{/each}}
             </div>
             <div class="controls pure-g">
-              <div class="left pure-u-1-2"><i class="ion-ios-arrow-left"></i></div>
-              <div class="right pure-u-1-2"><i class="ion-ios-arrow-right"></i></div>
+            {{#if slideIdx <= 0}}
+              <div class="left fade pure-u-1-2"><i class="ion-ios-arrow-left"></i></div>
+            {{else}}
+              <div class="left pure-u-1-2" on-click="set('slideIdx', (slideIdx - 1))"><i class="ion-ios-arrow-left"></i></div>
+            {{/if}}
+            {{#if slideIdx < .details.pics.length - 1}}
+              <div class="right pure-u-1-2" on-click="set('slideIdx', (slideIdx + 1))"><i class="ion-ios-arrow-right"></i></div>
+            {{else}}
+              <div class="right fade pure-u-1-2"><i class="ion-ios-arrow-right"></i></div>
+            {{/if}}
             </div>
           </div>
           <div class="pure-u-1 pure-u-md-1-2 details">
@@ -202,6 +210,7 @@
       ractive.on('lightbox', function(ev, item) {
         this.set('selected', item);
         this.set('lightBox', true);
+        ractive.set('slideIdx', 0);
       });
     </script>
   </div>

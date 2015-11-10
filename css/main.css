@@ -94,9 +94,9 @@ div.icon {
   padding-top: 0.35em;
 }
 
-.light-box .container {
-  min-height: 1500px;
+.light-box #container {
   overflow-y: auto;
+  max-height: 100%;
 }
 
 .light-box .body {
@@ -125,23 +125,28 @@ div.icon {
   font-size: 2em;
   text-align: center;
   background-color: rgb(1,1,2);
+  cursor: pointer;
+}
+
+.light-box .controls .fade {
+  color: rgba(255,255,255,0.25);
+  cursor: initial;
 }
 
 .light-box .img {
-  max-height: 75vh;
-  min-height: 50vh;
   overflow: hidden;
 }
 
 .light-box .slide-wrapper {
-  display: inline-block;
   white-space: nowrap;
   height: 100%;
-  width: 100%;
+  position: relative;
+  transition:left 0.25s ease-in-out;
 }
 
 .light-box .slide-img {
-  background-size: cover;
+  background-size: contain;
+  background-position: center center;
   padding-bottom: 100%;
   display: inline-block;
   width: 100%;
