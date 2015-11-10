@@ -146,7 +146,8 @@ div.icon {
 
 .light-box .slide-img {
   background-size: contain;
-  background-position: center center;
+  background-position: top center;
+  background-repeat: no-repeat;
   padding-bottom: 100%;
   display: inline-block;
   width: 100%;
@@ -396,9 +397,6 @@ footer a, footer a:visited {
     background-image: none;
     background-color: rgba(0,0,0,0.25);
   }
-  .light-box .details {
-    padding: 0;
-  }
 }
 
 @media screen and (max-width: 35.5em) {
@@ -407,5 +405,8 @@ footer a, footer a:visited {
   }
   section#work .l-box {
     padding: 1em 0;
+  }
+  .light-box .details {
+    padding: 0;
   }
 }
