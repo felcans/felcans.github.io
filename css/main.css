@@ -111,6 +111,7 @@ div.icon {
 
 .light-box .item {
   padding-bottom: 1em;
+  line-height: 1.5em;
 }
 
 .light-box a {
@@ -316,6 +317,10 @@ section#work .qcc:hover {
 
 section#work .dt:hover {
   background-color: #119E5A;
+}
+
+section#work .elevation:hover {
+  background-color: #F37121;
 }
 
 /*
