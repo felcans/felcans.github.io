@@ -34,7 +34,7 @@
         <li><a href="http://felcans.github.io/JustinFelcanResume.pdf"><i class="ion-paperclip"></i></a></li>
       </ul>
     </nav>
-    <div class="scroll" id="scroll"><i class="ion-ios-arrow-down"></i></div>
+    <div class="scroll" id="scroll"><a href="#about"><i class="ion-ios-arrow-down"></i></a></div>
   </div>
 </header>
   
@@ -92,7 +92,11 @@
         </div>
         <div class="body">
           <div class="pure-u-1 pure-u-md-1-2 img">
-            <img src="{{.details.picId}}1.png" class="pure-img" />
+            <div class="slide-wrapper">
+            {{#each .details.pics}}
+              <div class="slide-img" style="background-image:url('{{[.]}}');"></div>
+            {{/each}}
+            </div>
             <div class="controls pure-g">
               <div class="left pure-u-1-2"><i class="ion-ios-arrow-left"></i></div>
               <div class="right pure-u-1-2"><i class="ion-ios-arrow-right"></i></div>
@@ -101,7 +105,7 @@
           <div class="pure-u-1 pure-u-md-1-2 details">
             <div class="item">
               <div class="label">URL</div>
-              <a href="http://{{.details.url}}" rel="nofollow" target="_blank">{{.details.url}}</a>
+              <a href="//{{.details.url}}" rel="nofollow" target="_blank">{{.details.url}}</a>
             </div>
             <div class="item">
               <div class="label">Tasks</div>
@@ -131,19 +135,66 @@
               name:'Auto City STL', cls:'autocity',
               details: {
                 url: 'www.autocitystl.net',
-                picCount: 3,
-                picId: 'img/AutoCitySTL/autocity-',
-                tasks: ['Front-End Components for multiple location dealership'],
+                pics: ['img/AutoCitySTL/autocity-1.png','img/AutoCitySTL/autocity-2.png'],
+                tasks: 'Responsive Front-End Components for multiple location dealership',
+                tools: ['HTML', 'CSS', 'JS', 'Photoshop'],
+                other: 'Live example of responsive templates.'
+              }
+            },
+            { name:'Dealer Templates', cls:'dt',
+              details: {
+                url: 'www.layouts.waynereaves.net',
+                pics: 'img/DealerTemplates/dt-',
+                tasks: 'Responsive Front-End Components and Design',
+                tools: ['HTML', 'CSS', 'JS', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
+              } 
+            },
+            { name:'Wayne Reaves', cls:'wr',
+              details: {
+                url: 'www.waynereaves.com (coming soon)',
+                pics: 'img/WayneReaves/wr-',
+                tasks: 'Responsive Front-End Components and Design',
                 tools: ['HTML', 'CSS', 'JS', 'Photoshop'],
                 other: 'This dealer is a nightmare.'
               }
             },
-            { name:'Dealer Templates', cls:'dt' },
-            { name:'Wayne Reaves', cls:'wr' },
-            { name:'Portal', cls:'portal' },
-            { name:'Ideal Classic Cars', cls:'icc' },
-            { name:'Cycle Tampa', cls:'cycle' },
-            { name:'QCC Vans', cls:'qcc' }
+            { name:'Portal', cls:'portal',
+              details: {
+                url: 'www.portal.waynereaves.net/admin/',
+                pics: 'img/Portal/portal-',
+                tasks: 'Logo Creation / Design',
+                tools: ['Illustrator', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
+              }
+            },
+            { name:'Ideal Classic Cars', cls:'icc',
+              details: {
+                url: 'www.idealclassiccars.net',
+                pics: 'img/ICC/icc-',
+                tasks: 'Website Design',
+                tools: ['HTML', 'CSS', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
+              }
+            },
+            { name:'Cycle Tampa', cls:'cycle',
+              details: {
+                url: 'www.cycletampa.com',
+                pics: 'img/CycleTampa/cycle-',
+                tasks: 'Website Design',
+                tools: ['HTML', 'CSS', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
+              }
+            },
+            { name:'QCC Vans', cls:'qcc',
+              details: {
+                url: 'www.qccvans.net',
+                pics: 'img/QCC/qcc-',
+                tasks: 'Website Design',
+                tools: ['HTML', 'CSS', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
+              }
+            }
           ]
         }
       });
@@ -182,7 +233,9 @@
     </div>
     <div class="pure-u-1 pure-u-md-1-2 l-box">
       <p>Thanks for checking out my portfolio! If you want to contact me, shoot me an email or message me on <a href="https://twitter.com/felcans">Twitter</a> to get a more immediate response.</p>
-      <button type="submit" class="pure-button pure-button-primary">Click to Download Resume</button>
+      <a href="http://felcans.github.io/JustinFelcanResume.pdf">
+        <button type="submit" class="pure-button pure-button-primary">Click to Download Resume</button>
+      </a>
     </div>
   </div>
 </section>

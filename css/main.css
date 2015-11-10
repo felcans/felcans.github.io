@@ -127,6 +127,26 @@ div.icon {
   background-color: rgb(1,1,2);
 }
 
+.light-box .img {
+  max-height: 75vh;
+  min-height: 50vh;
+  overflow: hidden;
+}
+
+.light-box .slide-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.light-box .slide-img {
+  background-size: cover;
+  padding-bottom: 100%;
+  display: inline-block;
+  width: 100%;
+}
+
 /*
 * Header styles
 *
