@@ -70,7 +70,7 @@ div.icon {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.95);
   z-index: -1;
   color: #fff;
   opacity: 0;
@@ -81,6 +81,50 @@ div.icon {
   z-index: 999;
   opacity: 1;
   transition: opacity 0.5s ease-in-out, z-index 0s linear;
+}
+
+.light-box .header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-box .close {
+  cursor: pointer;
+  font-size: 3em;
+  text-align: right;
+  padding-top: 0.35em;
+}
+
+.light-box .container {
+  min-height: 1500px;
+  overflow-y: auto;
+}
+
+.light-box .body {
+  padding: 1em 0;
+}
+
+.light-box .label {
+  font-weight: 300;
+  color: #12ade0;
+  padding-bottom: 0.5em;
+}
+
+.light-box .item {
+  padding-bottom: 1em;
+}
+
+.light-box a {
+  color: #fff;
+}
+
+.light-box .details {
+  padding-left: 1em;
+}
+
+.light-box .controls {
+  font-size: 2em;
+  text-align: center;
+  background-color: rgb(1,1,2);
 }
 
 /*
@@ -153,7 +197,7 @@ header .scroll {
   font-size: 2em;
   width: 100%;
   position: absolute;
-  bottom: 2em;
+  bottom: 10vh;
 }
 
 /*
@@ -246,6 +290,10 @@ section#work .qcc:hover {
   background-color: #025A95;
 }
 
+section#work .dt:hover {
+  background-color: #119E5A;
+}
+
 /*
  * Contact styles
  *
@@ -322,6 +370,9 @@ footer a, footer a:visited {
   section#work .overlay {
     background-image: none;
     background-color: rgba(0,0,0,0.25);
+  }
+  .light-box .details {
+    padding: 0;
   }
 }
 

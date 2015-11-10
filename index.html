@@ -48,12 +48,12 @@
     <div class="text pure-u-sm-1-2 pure-u-1">
       <div class="item"><div class="h">name</div> Justin Felcan</div>
       <div class="item"><div class="h">age</div> 26</div>
-      <div class="item"><div class="h">skills</div> Front-End Web Development / Design</div>
+      <div class="item"><div class="h">skills</div> 2 years Front-End Web Development / Design</div>
       <div class="item"><div class="h">tools</div> HTML / CSS / JS / Photoshop / Illustrator</div>
     </div>
     <div class="text pure-u-sm-1-2 pure-u-1">
       <div class="item"><div class="h">email</div> felcans@gmail.com</div>
-      <div class="item"><div class="h">employers</div> USAF-Reserves (2008 - 2012), Wayne Reaves (present)</div>
+      <div class="item"><div class="h">employers</div> USAF-Reserves (2008 - 2012), Wayne Reaves (2013 - present)</div>
       <div class="item"><div class="h">education</div> Associates in Information Technology</div>
       <div class="item"><div class="h">listening to</div> tycho // com truise // purity ring // young wonder</div>
       
@@ -80,10 +80,45 @@
       </div>
      {{/each}}
      <div class="pure-u-1 light-box {{#if ~/lightBox}}active{{/if}}">
-      {{#~/selected}}
-        {{.name}}
-      {{/}}
-      <button on-click="set('lightBox', false)">Fuck</button>
+      <div id="container" class="pure-g">
+        {{#~/selected}}
+        <div class="header">
+          <div class="title pure-u-7-8">
+            <h1>{{.name}}</h1>
+          </div>
+          <div class="close pure-u-1-8">
+            <i class="ion-ios-close-empty" on-click="set('lightBox', false)"></i>
+          </div>
+        </div>
+        <div class="body">
+          <div class="pure-u-1 pure-u-md-1-2 img">
+            <img src="{{.details.picId}}1.png" class="pure-img" />
+            <div class="controls pure-g">
+              <div class="left pure-u-1-2"><i class="ion-ios-arrow-left"></i></div>
+              <div class="right pure-u-1-2"><i class="ion-ios-arrow-right"></i></div>
+            </div>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-2 details">
+            <div class="item">
+              <div class="label">URL</div>
+              <a href="http://{{.details.url}}" rel="nofollow" target="_blank">{{.details.url}}</a>
+            </div>
+            <div class="item">
+              <div class="label">Tasks</div>
+              {{.details.tasks}}
+            </div>
+            <div class="item">
+              <div class="label">Tools</div>
+              {{.details.tools}}
+            </div>
+            <div class="item">
+              <div class="label">Other</div>
+              {{.details.other}}
+            </div>
+          </div>
+        </div>
+        {{/}}
+      </div>
      </div>
     </script>
     <script>
@@ -97,12 +132,13 @@
               details: {
                 url: 'www.autocitystl.net',
                 picCount: 3,
-                picId: 'autocity-',
-                tasks: [],
-                tools: [],
-                other: ''
+                picId: 'img/AutoCitySTL/autocity-',
+                tasks: ['Front-End Components for multiple location dealership'],
+                tools: ['HTML', 'CSS', 'JS', 'Photoshop'],
+                other: 'This dealer is a nightmare.'
               }
             },
+            { name:'Dealer Templates', cls:'dt' },
             { name:'Wayne Reaves', cls:'wr' },
             { name:'Portal', cls:'portal' },
             { name:'Ideal Classic Cars', cls:'icc' },
@@ -145,7 +181,7 @@
       </form>
     </div>
     <div class="pure-u-1 pure-u-md-1-2 l-box">
-      <p>Thanks for checking out my totally cool portfolio. If you'd like to contact me about possible work or just to chat, feel free to reach out to me by using my contact form. You can also reach me on <a href="https://twitter.com/felcans">Twitter</a> to get a more immediate response.</p>
+      <p>Thanks for checking out my portfolio! If you want to contact me, shoot me an email or message me on <a href="https://twitter.com/felcans">Twitter</a> to get a more immediate response.</p>
       <button type="submit" class="pure-button pure-button-primary">Click to Download Resume</button>
     </div>
   </div>
