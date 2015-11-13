@@ -112,8 +112,9 @@
           </div>
           <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 details">
             <div class="item">
-              <div class="label">URL</div>
-              <a href="//{{.details.url}}" rel="nofollow" target="_blank">{{.details.url}}</a>
+              <a href="//{{.details.url}}" rel="nofollow" target="_blank">
+                <div class="pure-button pure-button-primary">Visit Website</div>
+              </a>
             </div>
             <div class="item">
               <div class="label">Tasks</div>
@@ -160,11 +161,11 @@
             },
             { name:'Wayne Reaves', cls:'wr',
               details: {
-                url: 'www.waynereaves.com (coming soon)',
+                url: 'www.waynereaves.com',
                 pics: ['img/WayneReaves/wr-1.jpg', 'img/WayneReaves/wr-2.jpg', 'img/WayneReaves/wr-3.jpg', 'img/WayneReaves/wr-4.jpg', 'img/WayneReaves/wr-5.jpg', 'img/WayneReaves/wr-6.jpg'],
                 tasks: 'Responsive Front-End Components and Design',
                 tools: ['HTML5', 'CSS3', 'RactiveJS', 'Photoshop'],
-                description: 'Revision of the Wayne Reaves website.'
+                description: 'Revision of the Wayne Reaves website. Site coming soon!'
               }
             },
             { name:'Portal', cls:'portal',
@@ -173,7 +174,7 @@
                 pics: ['img/Portal/portal-1.png', 'img/Portal/portal-2.jpg', 'img/Portal/portal-3.jpg','img/Portal/portal-4.jpg'],
                 tasks: 'Logo Creation / Design',
                 tools: ['Illustrator', 'Photoshop'],
-                description: 'Created a logo for the Wayne Reaves Repsonsive Website CMS. Also, created preview designs to display features of the administration section.'
+                description: 'Created a logo for the Wayne Reaves Responsive Website CMS. Also, created preview designs to display features of the administration section.'
               }
             },
             { name:'Ideal Classic Cars', cls:'icc',
@@ -236,7 +237,7 @@
       <form class="pure-form" action="http://formspree.io/felcans@gmail.com" method="POST">
         <fieldset class="pure-group">
             <input type="text" class="pure-input-1" placeholder="Name" name="name">
-            <input type="number" class="pure-input-1" placeholder="Phone" name="phone">
+            <input type="tel" class="pure-input-1" placeholder="Phone" name="phone">
             <input type="email" class="pure-input-1" placeholder="Email" name="_replyto">
         </fieldset>
 

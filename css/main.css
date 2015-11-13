@@ -40,6 +40,7 @@ div.icon {
   content: ' ';
   background-image: url('../img/backdrop.jpg');
   background-position: bottom center;
+  background-repeat: no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -254,6 +255,7 @@ section#about .h {
   font-weight: 300;
   color: #12ade0;
   padding-bottom: 0.5em;
+  text-transform: capitalize;
 }
 
 section#about .item {
