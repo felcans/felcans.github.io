@@ -1,5 +1,3 @@
 # felcans.github.io
 
-I'm just doing this so I don't get fined.
-
-^_^
+27 Designer / Developer
