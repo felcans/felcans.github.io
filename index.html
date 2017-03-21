@@ -19,7 +19,7 @@
   <script type="text/javascript" src="js/ractive.min.js"></script>
 </head>
 <body>
-
+  <div id="main"></div>
   <script id="template" type="text/html">
     <div><img src="img/chibears_header_1.jpg" alt=""></div>
     <div><img src="img/chibears_header_2.jpg" alt=""></div>
@@ -32,11 +32,10 @@
     <div><img src="img/header8.jpg" alt=""></div>
     <div><img src="img/jay.jpg" alt=""></div>
     <div><img src="img/jordanhoward_quote.jpg" alt=""></div>
-asdkfjlasjkdf
   </script>
   <script>
     var ractive = new Ractive({
-      el: '.work-wrapper',
+      el: '#main',
       template: '#template',
       data: {
       
