@@ -21,18 +21,34 @@
 <body>
   <div id="main"></div>
   <script id="template" type="text/html">
-    <div class="chibears"><img src="/img/chibears/chibears_header_1.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/chibears_header_2.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/draft_prospects.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header3.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header4.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header5.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header6.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header7.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/header8.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/jay.jpg" alt=""></div>
-    <div class="chibears"><img src="/img/chibears/jordanhoward_quote.jpg" alt=""></div>
+    {{#if .bears}}
+      <div class="chibears"><img src="/img/chibears/chibears_header_1.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/chibears_header_2.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/draft_prospects.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header3.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header4.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header5.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header6.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header7.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/header8.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/jay.jpg" alt=""></div>
+      <div class="chibears"><img src="/img/chibears/jordanhoward_quote.jpg" alt=""></div>
+    {{else}}
+      <div class="v">voyager</div>
+    {{/if}}
     <style>
+      .v {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(50%);
+        text-align: center;
+        color: #fff;
+        letter-spacing: 2em;
+        text-transform: uppercase;
+        font-size: 1em;
+      }
       .chibears img {
         max-width: 1000px;
         margin: 1em auto;
