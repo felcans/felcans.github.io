@@ -6,14 +6,14 @@
   <meta name="description" content="Web Design / Development">
   <meta name="keywords" content="Justin Felcan, web design, web development, georgia, web, designer, developer">
   <title>The Online Portfolio of Justin Felcan</title>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="css/pure-min.css">
   <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
   <!--<![endif]-->
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
   <script type="text/javascript" src="js/ractive.min.js"></script>
@@ -21,47 +21,19 @@
 <body>
   <div id="main"></div>
   <script id="template" type="text/html">
-      <div class="v">VOYAGER</div>
-      <!--<div class="chibears"><img src="/img/chibears/chicago_flares.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/street_fighter.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/trubisky2.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/shaheen.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/chibears_header_1.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/chibears_header_2.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/draft_prospects.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header3.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header4.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header5.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header6.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header7.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/header8.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/jay.jpg" alt=""></div>
-      <div class="chibears"><img src="/img/chibears/jordanhoward_quote.jpg" alt=""></div>-->
-    <style>
-      .v {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(50%);
-        text-align: center;
-        color: #fff;
-        letter-spacing: 2em;
-        text-transform: uppercase;
-        font-size: 1em;
-      }
-      .chibears img {
-        max-width: 1000px;
-        margin: 1em auto;
-        display: block;
-        box-shadow: 0;
-        transition: all 0.2s ease-in-out
-      }
-      .chibears:hover img {
-        box-shadow: 0 0 0.5em rgba(0,0,0,0.3)
+    <div class="header pure-g">
+      <div class="logo pure-u-3-4">V89.io</div>
+      <div class="menu pure-u-1-4"><i class="ion-navicon-round"></i></div>
+    </div>
+    <div class="socials">
+      <div class="github"><a href="">GitHub</a></div>
+      <div class="twitter"><a href="">Twitter</a></div>
+      <div class="linkedin"><a href="">LinkedIn</a></div>
+    </div>
+    <div class="content">
+      
+    </div>
 
-      }
-    </style>
   </script>
   <script>
     var ractive = new Ractive({

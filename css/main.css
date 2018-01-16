@@ -1,404 +1,53 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+body {
+	margin: 0;
+	padding: 0;
+  color: #fff;
+  background: url('../img/ep_naturalblack.png');
+  font-size: 1em;
+  font-family: 'Saira Condensed', sans-serif;
 }
 
-/*
- * -- BASE STYLES --
- * Most of these are inherited from Base, but I want to change a few.
- */
-body {
-  color: #fff;
-  background: url('/img/ep_naturalblack.png');
-  font-size: 1em;
+* {
+	box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-#container {
-  max-width:1000px;
-  margin:0 auto;
-  padding:0 1em;
+.header {
+	font-size: 1.5em;
+	padding: 0.5em 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
 }
 
-.l-box {
-  padding:0.5em 2em;
+.header .logo {
+
 }
 
-div.icon {
-  text-align: center;
+.header .menu {
+	text-align: right;
+	cursor: pointer;
 }
 
-.icon i[class^="ion"] {
-  color: #fff;
-  font-size: 3em;
+.socials {
+	position: fixed;
+	top: 50%;
+	right: 2em;
+	transform: translate(50%,-50%) rotate(90deg);
 }
 
-.sizer {
-  display:inline-block;
-  vertical-align: middle;
-  height:100%;
-  width:0;
+.socials > div {
+	display: inline-block;
+	padding: 0 0.5em;
+	color: rgba(255,255,255,0.5);
+	transition: all 0.2s ease-in-out;
 }
-
-.pure-g {
-  display: block;
-}
-
-/*
-* Light Box styles
-*
-*/
-
-.light-box {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.95);
-  z-index: -1;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out, z-index 0s linear 0.5s;
-}
-
-.light-box.active {
-  z-index: 999;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out, z-index 0s linear;
-}
-
-.light-box .header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.light-box .close {
-  cursor: pointer;
-  font-size: 3em;
-  text-align: right;
-  padding-top: 0.35em;
-}
-
-.light-box #container {
-  overflow-y: auto;
-  max-height: 100%;
-}
-
-.light-box .body {
-  padding: 1em 0;
-}
-
-.light-box .label {
-  font-weight: 300;
-  color: #12ade0;
-  padding-bottom: 0.5em;
-}
-
-.light-box .item {
-  padding-bottom: 1em;
-  line-height: 1.5em;
-}
-
-.light-box a {
-  color: #fff;
-}
-
-.light-box .details {
-  padding-left: 1em;
-}
-
-.light-box .controls {
-  font-size: 2em;
-  text-align: center;
-  cursor: pointer;
-}
-
-.light-box .controls .fade {
-  color: rgba(255,255,255,0.25);
-  cursor: initial;
-}
-
-.light-box .img {
-  overflow: hidden;
-}
-
-.light-box .slide-wrapper {
-  white-space: nowrap;
-  position: relative;
-  transition:left 0.25s ease-in-out;
-}
-
-.light-box .slide-img {
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 75%;
-}
-
-/*
-* Header styles
-*
-*/
-
-header {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: table;
-  text-shadow: 0.1em 0.1em 0 rgba(0,0,0,0.5);
-}
-
-header .header-box {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: lato, sans-serif;
-  font-weight: 300;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 4em;
-}
-
-header h3 {
-  margin-bottom:0;
-  font-weight:500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em
-}
-
-header ul {
-  padding: 0;
-  margin-top: 0;
-}
-
-header li {
-  padding: 0.5em 3em;
-  display: inline-block;
-}
-
-header li:hover {
-  background-color: rgba(255,255,255,0.1);
-}
-
-header i[class^="ion"] {
-  font-size:1.5em;
-}
-
-header a {
-  color:inherit;
-}
-
-header a:visited {
-  color:inherit;
-}
-
-header .scroll {
-  font-size: 2em;
-  width: 100%;
-  position: absolute;
-  bottom: 10vh;
-}
-
-/*
- * Section styles
- *
- */
-
-section, footer {
-  padding:2em 0; 
-}
-
-section .title-bar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-section .title-bar h2 {
-  margin-top: 0;
-}
-
-
-/*
- * About styles
- *
- */
-
-section#about .h {
-  font-weight: 300;
-  color: #12ade0;
-  padding-bottom: 0.5em;
-  text-transform: capitalize;
-}
-
-section#about .item {
-  padding:1em 0;
-}
-
-/*
- * Work styles
- *
- */
-
-section#work .overlay {
-  -webkit-transition: background-position 2s cubic-bezier(0, 1, 0, 1), border-color 500ms, background-color 500ms;
-          transition: background-position 2s cubic-bezier(0, 1, 0, 1), border-color 500ms, background-color 500ms;
-  background-attachment: fixed, scroll;
-  background-size: 100vw 100vh, cover;
-  background-position: center center, 0 0;
-  background-image: -webkit-repeating-linear-gradient(135deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
-  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0.075) 10%, rgba(255, 255, 255, 0.075) 14%, rgba(255, 255, 255, 0.15) 14%, rgba(255, 255, 255, 0.15) 15%, rgba(255, 255, 255, 0.075) 17%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0.15) 42%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.075) 60%, rgba(255, 255, 255, 0.075) 66%, rgba(255, 255, 255, 0.15) 66%, rgba(255, 255, 255, 0.075) 70%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%), radial-gradient(ellipse farthest-corner, transparent, rgba(0, 0, 0, 0.2) 110%);
-  padding: 1em;
-}
-
-section#work .overlay:hover {
-  background-position: -100vw 0, 0 0;
-}
-
-section#work .l-box {
-  padding: 1em;
-}
-
-section#work .work-box {
-  text-align: center;
-  cursor:pointer;
-  background-color: transparent;
-  transition: background-color 0.5s ease-in-out;
-}
-
-section#work .autocity:hover {
-  background-color: #CA181F;
-}
-
-section#work .wr:hover {
-  background-color: #f7c00d;
-}
-
-section#work .portal:hover {
-  background-color: #0078E7;
-}
-
-section#work .icc:hover {
-  background-color: #E38E19;
-}
-
-section#work .cycle:hover {
-  background-color: #E82336;
-}
-
-section#work .qcc:hover {
-  background-color: #025A95;
-}
-
-section#work .dt:hover {
-  background-color: #119E5A;
-}
-
-section#work .elevation:hover {
-  background-color: #F37121;
-}
-
-/*
- * Contact styles
- *
- */
-
- section#contact a {
-  color:#12ADE0;
- }
-
- section#contact p {
-  line-height: 1.5em;
- }
-
- .pure-form input[type="text"], .pure-form input[type="password"], .pure-form input[type="email"], .pure-form input[type="url"], .pure-form input[type="date"], .pure-form input[type="month"], .pure-form input[type="time"], .pure-form input[type="datetime"], .pure-form input[type="datetime-local"], .pure-form input[type="week"], .pure-form input[type="number"], .pure-form input[type="search"], .pure-form input[type="tel"], .pure-form input[type="color"], .pure-form select, .pure-form textarea {
-  color:#fff;
-  background-color:rgba(0,0,0,0.25);
-  box-shadow: none;
-  border:0;
- }
-
-.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected  {
-  background-color:#12ADE0;
-}
-/*
- * Footer styles
- *
- */
-
-footer {
-  color: rgba(255,255,255,0.75);
-  text-align: center;
-  font-size: 0.9em;
-}
-
-footer #container {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-footer .wrapper {
-  padding: 2em;
-}
-
-footer a, footer a:visited {
-  color:#12ade0;
-  text-decoration: none;
-}
-
-
-/*
- * Media Queries
- *
- */
-
-@media screen and (min-width:48em) {
-  section#contact p {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width:48em) {
-  header h3{
-    font-size: 0.9em;
-  }
-  header h1 {
-    font-size:3em;
-  }
-  header li {
-    padding: 0 1.5em;
-  }
-  header ul {
-    margin-top:1em;
-  }
-  section#work .overlay {
-    background-image: none;
-    background-color: rgba(0,0,0,0.25);
-  }
-}
-
-@media screen and (max-width: 35.6em) {
-  .l-box {
-    padding: 0;
-  }
-  section#work .l-box {
-    padding: 1em 0;
-  }
-  .light-box .details {
-    padding: 0;
-  }
+.socials > div:hover {
+	color: #fff;
 }
